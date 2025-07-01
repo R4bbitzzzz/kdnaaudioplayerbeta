@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="musicplayC.MainWindow"
+        Title="Music Player" Width="600" Height="400">
+
+    <StackPanel Orientation="Vertical" Margin="10">
+        <TextBlock x:Name="TitleBlock" FontSize="16" Margin="0,0,0,10"/>
+        
+        <StackPanel x:Name="VisualizerPanel" Orientation="Horizontal" 
+                   Height="150" HorizontalAlignment="Center"/>
+
+        <Slider x:Name="PositionSlider" Minimum="0" Maximum="100"
+                PointerPressed="PositionSlider_PointerPressed"
+                PointerReleased="PositionSlider_PointerReleased"
+                ValueChanged="PositionSlider_ValueChanged"/>
+
+        <TextBlock x:Name="TimeCounter" HorizontalAlignment="Center" Margin="0,5,0,15"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <Button Content="Open" Click="OpenFile_Click" Margin="5" Width="80"/>
+            <Button Content="Play" Click="PlayButton_Click" Margin="5" Width="80"/>
+            <Button Content="Pause" Click="PauseButton_Click" Margin="5" Width="80"/>
+            <Button Content="Stop" Click="StopButton_Click" Margin="5" Width="80"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
